@@ -104,8 +104,9 @@
         <section class="contact" id="contacto">
             <form class="form-mail">
                 <h3>contacto</h3>
-                <input type="text" name="" id="" placeholder="Déjame tu email">
-                <button>Enviar</button>
+                <input type="text" name="" class="txtMail" id="txtMail" placeholder="Déjame tu email">
+                <!-- <button class="enviarMail" id="enviarMail" onclick="correo();">Enviar</button> -->
+                <input type="button" class="enviarMail" id="enviarMail" value="Enviar" onclick="correo();">
             </form>
             <div class="social">
                 <a href="https://twitter.com/smontenegroc" target="_blank"><img src="images/twitter.svg" width="50px" height="50px" alt=""></a>
@@ -113,10 +114,17 @@
                 <a href="https://github.com/smontenegro95/" target="_blank"><img src="images/github.svg" alt="" width="50px" height="50px"></a>
                 <a href="https://www.instagram.com/smontenegro95/" target="_blank"><img src="images/instagram.svg" alt="" width="50px" height="50px"></a>
             </div>
-        </section>
+        </section>        
     </main>
     <footer class="footer">
         <p>Desarrollado por Sergio Montenegro</p>
     </footer>
+    <!-- <script>
+        function correo(){
+        //var mail = document.getElementById('mail').value;
+        alert('conectado');}
+    </script> -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 </html>
