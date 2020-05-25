@@ -13,13 +13,20 @@
         <figure class="logo">
             <img src="https://i.ibb.co/YpT6nVY/logo.png" alt="logo">
         </figure>
-        <nav class="menu">
-            <ul>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="container-menu">
+            <div class="menu-icon" onclick="menu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="hero">
@@ -118,5 +125,6 @@
     <footer class="footer">
         <p>Desarrollado por Sergio Montenegro</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

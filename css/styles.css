@@ -10,20 +10,45 @@
     align-items: center;
     
 }
-.menu a{
-    text-decoration: none;
-    color: white;
-    margin-right: 15px;
-    padding: 5px;
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .menu ul li{
-    display: inline;
-    list-style: none;
+    display: inline-block;
 }
-.menu a:hover{
+.menu ul li a{
+    color: white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.menu ul li a:hover{
     background-color: white;
     color: #1c252c;
-    border-radius: 2px;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;    
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}  
+.change .bar2 {opacity: 0;
+}  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 /*--------------------hero------------------*/
 .hero{
@@ -210,9 +235,26 @@ h2{
 @media screen and (max-width: 768px){
     .menu{
         display: none;
+        position: absolute;
+        
     }
-    .logo{
-        margin: auto;
+    .menu-icon{
+        display: inline-block;
+    }
+    .active{
+        display: block;
+        width: 150px;
+        height: 150px;
+        right: 0px;
+    }
+    .menu ul{
+        margin-top: 5px;
+    }
+    .menu ul li{
+        text-align: center;
+        width: 100%;
+        background-color: #1c252c;
+        border-top: 1px solid white;
     }
     .skills{
         width: 100%;
