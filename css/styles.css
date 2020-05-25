@@ -8,7 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position: fixed;
+    width: 100%;
 }
 .menu ul{
     list-style: none;
@@ -57,6 +58,7 @@
     background-color: #1c252f;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 45px;
 }
 .hero h1{
     margin: 30px 0 30px 30px;
@@ -81,6 +83,7 @@
     margin: auto; 
     text-align: left;
     padding-top: 20px;
+    padding-top: 60px;
 }
 h2{
     color: #026fff;
@@ -126,7 +129,7 @@ h2{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-top: 60px;
 }
 .project-item{
     width: 1000px;
@@ -237,7 +240,6 @@ h2{
     .menu{
         display: none;
         position: absolute;
-        
     }
     .menu-icon{
         display: inline-block;
@@ -256,6 +258,9 @@ h2{
         width: 100%;
         background-color: #1c252c;
         border-top: 1px solid white;
+    }
+    .menu ul li:hover{
+        border-left:1px solid #1c252c;
     }
     .skills{
         width: 100%;

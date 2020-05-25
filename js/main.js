@@ -4,6 +4,14 @@ function mostrar_menu(x) {
     x.classList.toggle("change");    
     menu.classList.toggle("active");
 }
+
+var cerrar = document.getElementById('menu-item');
+cerrar.addEventListener('click', () =>{
+    var menu = document.getElementById('menu');
+    var menuIcon = document.getElementById('menu-icon');
+    menu.classList.remove("active");
+    menuIcon.classList.remove("change");
+});
 function validar_correo(correo){
     var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
