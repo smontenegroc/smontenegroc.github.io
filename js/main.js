@@ -1,5 +1,5 @@
 
-function menu(x) {
+function mostrar_menu(x) {
     var menu = document.getElementById('menu');
     x.classList.toggle("change");    
     menu.classList.toggle("active");
@@ -14,16 +14,15 @@ function validar_correo(correo){
         return (false);
     }
 }
-function correo(){
+function obtener_correo(){
     var mail = document.getElementById('txtMail');
-    if(validar_correo(mail.value) == true){
+    if(validar_correo(mail.value.toLowerCase()) == true){
         mail.value = '';
         alert_correo_valido();
     }
     else{
         alert_correo_invalido();
     }
-    mail.focus();
 }
 
 function alert_correo_valido(){
