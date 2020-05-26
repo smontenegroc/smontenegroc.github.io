@@ -14,7 +14,7 @@
             <img src="https://i.ibb.co/YpT6nVY/logo.png" alt="logo">
         </figure>
         <div class="container-menu">
-            <div class="menu-icon" id="menu-icon" onclick="mostrar_menu(this)">
+            <div class="menu-icon" id="menu-icon" onclick="mostrar_menu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -109,9 +109,9 @@
             </article>
         </section>
         <section class="contact" id="contacto">
-            <form class="form-mail">
+            <form class="form-mail" name="form-mail">
                 <h3>contacto</h3>
-                <input type="mail" name="" class="txtMail" id="txtMail" placeholder="Déjame tu email">
+                <input type="mail" name="txtMail" class="txtMail" id="txtMail" placeholder="Déjame tu email">
                 <input type="button" class="enviarMail" id="enviarMail" value="Enviar" onclick="obtener_correo();">
             </form>
             <div class="social">
