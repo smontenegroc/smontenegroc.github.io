@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
 }
-/*--------------------header------------------*/
+/*-------------------- Estilos header------------------*/
 .header{
     background-color: #1c252c;
     display: flex;
@@ -51,7 +51,7 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-/*--------------------hero------------------*/
+/*--------------------Estilos hero------------------*/
 .hero{
     display: flex;
     height: 250px;
@@ -76,7 +76,7 @@
     height: 250px; 
     margin-right: 40px;  
 }
-/*--------------------skills------------------*/
+/*--------------------Esstilos skills------------------*/
 .skills{
     width: 1000px;
     background-color: #f4fbff;  
@@ -124,23 +124,26 @@ h2{
 .skills-second img{
     margin: 0px 20px 20px 60px;
 }
-/*--------------------projects------------------*/
+/*--------------------Estilos projects------------------*/
 .projects{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 60px;
+    display: block;
+    /* justify-content: center;
+    flex-wrap: wrap;*/
+    padding-top: 60px; 
+    margin-left:170px;
+}
+.projects h2{
+    margin-left: 0;
 }
 .project-item{
     width: 1000px;
-    margin: 50px;
+    /* margin: 50px; */
     border: 2px solid rgba(0,0,0, 0.3);
     border-radius: 10px;
     background-color: white;
     display: flex;
     margin-bottom: 15px;
     align-items: center;
-    justify-content: space-around;
 }
 .project-detail{
     width: 500px;
@@ -158,16 +161,26 @@ h2{
 }
 .project-description{
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
-.project-url a{
+.project-url{
     text-decoration: none;
     color: #026fff;
-}
-.project-item picture{
     padding: 10px;
+    border: 1px solid #026fff;
+    border-radius: 5px;
+    font-family: 'Fjalla One', sans-serif;
 }
-/*--------------------contact------------------*/
+.project-url:hover{
+    background-color: #026fff;
+    color: white;
+}
+/* .project-item picture{
+    padding: 10px; 
+    border-radius: 250px; 
+    border:1px solid black;
+} */
+/*--------------------Estilos contact------------------*/
 .contact{
     background-color: #026fff;
     color: white;
@@ -190,7 +203,6 @@ h2{
     border-radius: 5px;
     border-style: solid;
     margin-top: 5px;
-    /* text-transform: lowercase; */
 }
 .enviarMail{
     display: block;
@@ -202,6 +214,8 @@ h2{
     border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 16px;
 }
 .enviarMail:hover{
     background-color: white;
@@ -213,7 +227,7 @@ h2{
 .social a{
     margin-right: 30px;
 }
-/*--------------------footer------------------*/
+/*--------------------Estilos footer------------------*/
 .footer{
     display: flex;
     color: white;
@@ -229,9 +243,6 @@ h2{
     .hero img{
         display: none;
     }  
-    .projects{
-        width: 100%;
-    }
     .project-item{
         display: block
     }  
@@ -255,7 +266,7 @@ h2{
     }
     .menu ul li{
         text-align: center;
-        width: 100%;
+        width: 95%;
         background-color: #1c252c;
         border-top: 1px solid white;
     }
@@ -268,18 +279,25 @@ h2{
         margin: auto;
     }
     .projects{
-        width: 100%;
+        width: 90%;
+        margin-left: 0;
+    } 
+    .projects h2{
+        margin-bottom: 10px;
     }
     .project-item{
         display: block;
         width: inherit;
+        text-align: center;
+        padding: 0;
+        margin-left: 15px;
     }
     .project-detail{
         width: 100%;
         /*padding: 5px 2px;*/
     }
     .project-description{
-        width: 80%;
+        width: 90%;
     }
     .contact{
         display: block;
