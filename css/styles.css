@@ -22,7 +22,7 @@
 .menu ul li a{
     color: white;
     display: block;
-    padding: 20px 20px;
+    padding: 1.25em;
     text-decoration: none;
 }
 .menu ul li a:hover{
@@ -32,11 +32,11 @@
 .menu-icon {
     display: none;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 0.32em;
 }
 .bar1, .bar2, .bar3 {
-    width: 25px;
-    height: 5px;
+    width: 1.56em;
+    height: 0.32em;
     background-color: white;
     margin: 6px 0;
     transition: 0.4s;    
@@ -54,14 +54,14 @@
 /*--------------------Estilos hero------------------*/
 .hero{
     display: flex;
-    height: 250px;
+    height: 15.625em;
     background-color: #1c252f;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 45px;
+    padding-top: 2.81em;
 }
 .hero h1{
-    margin: 30px 0 30px 30px;
+    margin: 0.75em 0 0.75em 0.75em;
     font-family: 'Fjalla One', sans-serif;
     font-size: 40px;
     line-height: 1.5;
@@ -72,34 +72,34 @@
     color: #026fff;
 }
 .hero img{
-    width: 500px;
-    height: 250px; 
-    margin-right: 40px;  
+    width: 31.25rem;
+    height: 15.625rem; 
+    margin-right: 2.5rem;  
 }
 /*--------------------Esstilos skills------------------*/
 .skills{
-    width: 1000px;
+    width: 62.5em;
     background-color: #f4fbff;  
     margin: auto; 
     text-align: left;
-    padding-top: 20px;
-    padding-top: 60px;
+    padding-top: 1.25em;
+    padding-top: 3.75em;
 }
 h2{
     color: #026fff;
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
-    margin-left: 60px;
+    margin-left: 2em;
 }
 .skills-main{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 15px;
+    margin: 0.94em;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .skills-items{
-    margin: 20px 0;
+    margin: 1.25em 0;
     border:1px solid rgba(0,0,0,0.2);    
 }
 .skills-items picture{
@@ -114,7 +114,7 @@ h2{
 .skills h3{
     color: #026fff;
     font-family: 'Fjalla One', sans-serif;
-    margin: 15px 60px;
+    margin: 0.94em 3.75em;
 }
 .skills-second{
     display: flex;
@@ -122,51 +122,51 @@ h2{
     justify-content: center;
 }
 .skills-second img{
-    margin: 0px 20px 20px 60px;
+    margin: 0 1.25em 1.25em 3.75em;
 }
 /*--------------------Estilos projects------------------*/
 .projects{
     display: block;
     /* justify-content: center;
     flex-wrap: wrap;*/
-    padding-top: 60px; 
-    margin-left:170px;
+    padding-top: 3.75em; 
+    margin-left:10.625em;
 }
 .projects h2{
     margin-left: 0;
 }
 .project-item{
-    width: 1000px;
+    width: 62.5em;
     /* margin: 50px; */
     border: 2px solid rgba(0,0,0, 0.3);
     border-radius: 10px;
     background-color: white;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 0.94em;
     align-items: center;
 }
 .project-detail{
-    width: 500px;
-    margin: 30px 30px;
+    width: 31.25em;
+    margin: 1.875em 1.875em;
 }
 .project-title{
     color: #026fff;
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 0.625em;
 }
 .project-languaje{
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 0.75em;
 }
 .project-description{
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 1.25em;
 }
 .project-url{
     text-decoration: none;
     color: #026fff;
-    padding: 10px;
+    padding: 0.625em;
     border: 1px solid #026fff;
     border-radius: 5px;
     font-family: 'Fjalla One', sans-serif;
@@ -184,19 +184,19 @@ h2{
 .contact{
     background-color: #026fff;
     color: white;
-    height: 150px;
+    height: 9.375em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .form-mail{
-    margin-left: 30px;
+    margin-left: 1.875em;
 }
 .txtMail{
     border-color: gray;
     padding: 10px 20px 10px 25px;
     background-image: url(../images/envelope.svg);
-    background-size: 15px 15px;
+    background-size: 0.94rem 0.94rem;
     background-repeat: no-repeat;
     background-position-y:center ;
     background-position-x: 5px;
