@@ -5,11 +5,10 @@ const menuIcon = document.getElementById('menu-icon');
 const mail = document.getElementById('txtMail');
 
 //Desplegar el menú
-
-function mostrar_menu(){
-    menuIcon.classList.toggle('change'); 
+menuIcon.addEventListener('click', () =>{
+    menuIcon.classList.toggle('change');
     menu.classList.toggle('active');
-}
+})
 
 //Cierra el menú al hacer clic en uno de sus elementos.
 
@@ -64,9 +63,6 @@ function alert_correo_invalido(){
 	stopKeydownPropagation: false,
     });
 }
-
-
-//JSON
 
 
 

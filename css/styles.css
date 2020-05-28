@@ -1,3 +1,6 @@
+:root{
+    --color-titulos: #026fff;
+}
 *{
     padding: 0;
     margin: 0;
@@ -69,7 +72,7 @@
     color: white;
 }
 .hero h1 strong{
-    color: #026fff;
+    color: var(--color-titulos);
 }
 .hero img{
     width: 31.25rem;
@@ -86,7 +89,7 @@
     padding-top: 3.75em;
 }
 h2{
-    color: #026fff;
+    color: var(--color-titulos);
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
     margin-left: 2em;
@@ -112,7 +115,7 @@ h2{
     font-family: 'Fjalla One', sans-serif;
 }
 .skills h3{
-    color: #026fff;
+    color: var(--color-titulos);
     font-family: 'Fjalla One', sans-serif;
     margin: 0.94em 3.75em;
 }
@@ -150,7 +153,7 @@ h2{
     margin: 1.875em 1.875em;
 }
 .project-title{
-    color: #026fff;
+    color: var(--color-titulos);
     font-size: 24px;
     margin-bottom: 0.625em;
 }
@@ -165,7 +168,7 @@ h2{
 }
 .project-url{
     text-decoration: none;
-    color: #026fff;
+    color: var(--color-titulos);
     padding: 0.625em;
     border: 1px solid #026fff;
     border-radius: 5px;
@@ -219,7 +222,7 @@ h2{
 }
 .enviarMail:hover{
     background-color: white;
-    color: #026fff;
+    color: var(--color-titulos);
 }
 .form-mail h3{
     font-family: 'Source Sans Prop', sans-serif;
@@ -269,9 +272,6 @@ h2{
         width: 95%;
         background-color: #1c252c;
         border-top: 1px solid white;
-    }
-    .menu ul li:hover{
-        border-left:1px solid #1c252c;
     }
     .skills{
         width: 100%;
