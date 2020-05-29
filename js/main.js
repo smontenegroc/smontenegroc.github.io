@@ -3,6 +3,7 @@ const menu = document.getElementById('menu');
 const cerrar = document.getElementById('menu-item');
 const menuIcon = document.getElementById('menu-icon');
 const mail = document.getElementById('txtMail');
+const btnMail = document.getElementById('enviarMail');
 
 //Desplegar el menú
 menuIcon.addEventListener('click', () =>{
@@ -29,16 +30,18 @@ function validar_correo(correo){
         return (false);
     }
 }
-function obtener_correo(){
-    if(validar_correo(mail.value.toLowerCase()) == true){
+
+btnMail.addEventListener('click', (e) =>{
+    e.preventDefault();
+    if(validar_correo(mail.value.toLowerCase())){
         mail.value = '';
         alert_correo_valido();
     }
     else{
         alert_correo_invalido();
+        mail.focus();
     }
-    mail.focus();
-}
+})
 
 function alert_correo_valido(){
     swal.fire({
