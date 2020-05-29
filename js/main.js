@@ -4,6 +4,7 @@ const cerrar = document.getElementById('menu-item');
 const menuIcon = document.getElementById('menu-icon');
 const mail = document.getElementById('txtMail');
 const btnMail = document.getElementById('enviarMail');
+const logo = document.getElementById('logo');
 
 //Desplegar el menú
 menuIcon.addEventListener('click', () =>{
@@ -20,17 +21,6 @@ cerrar.addEventListener('click', () =>{
 
 //Manejo del correo 
 
-function validar_correo(correo){
-    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-
-    if(expReg.test(correo)){
-        return (true);
-    }
-    else{
-        return (false);
-    }
-}
-
 btnMail.addEventListener('click', (e) =>{
     e.preventDefault();
     if(validar_correo(mail.value.toLowerCase())){
@@ -41,7 +31,18 @@ btnMail.addEventListener('click', (e) =>{
         alert_correo_invalido();
         mail.focus();
     }
-})
+});
+
+function validar_correo(correo){
+    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+    if(expReg.test(correo)){
+        return (true);
+    }
+    else{
+        return (false);
+    }
+}
 
 function alert_correo_valido(){
     swal.fire({
