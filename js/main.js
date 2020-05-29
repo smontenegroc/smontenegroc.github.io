@@ -4,7 +4,6 @@ const cerrar = document.getElementById('menu-item');
 const menuIcon = document.getElementById('menu-icon');
 const mail = document.getElementById('txtMail');
 const btnMail = document.getElementById('enviarMail');
-const logo = document.getElementById('logo');
 
 //Desplegar el menú
 menuIcon.addEventListener('click', () =>{
@@ -43,6 +42,18 @@ function validar_correo(correo){
         return (false);
     }
 }
+
+btnMail.addEventListener('click', (e) =>{
+    e.preventDefault();
+    if(validar_correo(mail.value.toLowerCase())){
+        mail.value = '';
+        alert_correo_valido();
+    }
+    else{
+        alert_correo_invalido();
+        mail.focus();
+    }
+})
 
 function alert_correo_valido(){
     swal.fire({
