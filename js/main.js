@@ -22,7 +22,7 @@ cerrar.addEventListener('click', () =>{
 
 btnMail.addEventListener('click', (e) =>{
     e.preventDefault();
-    if(validar_correo(mail.value.toLowerCase())){
+    if(validar_correo(mail.value.toLowerCase().trim())){
         mail.value = '';
         alert_correo_valido();
     }
