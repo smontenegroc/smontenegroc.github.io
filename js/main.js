@@ -43,18 +43,6 @@ function validar_correo(correo){
     }
 }
 
-btnMail.addEventListener('click', (e) =>{
-    e.preventDefault();
-    if(validar_correo(mail.value.toLowerCase())){
-        mail.value = '';
-        alert_correo_valido();
-    }
-    else{
-        alert_correo_invalido();
-        mail.focus();
-    }
-})
-
 function alert_correo_valido(){
     swal.fire({
     title: 'Gracias!',
