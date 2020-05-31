@@ -307,6 +307,7 @@ h2{
     .social{
         display: flex;
         justify-content: space-evenly;
+        
     }
     .social a{
         margin-top: 10px;

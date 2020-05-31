@@ -3,7 +3,7 @@ const menu = document.getElementById('menu');
 const cerrar = document.getElementById('menu-item');
 const menuIcon = document.getElementById('menu-icon');
 const mail = document.getElementById('txtMail');
-const btnMail = document.getElementById('enviarMail');
+const form = document.getElementById('form-mail');
 
 //Desplegar el menú
 menuIcon.addEventListener('click', () =>{
@@ -20,16 +20,20 @@ cerrar.addEventListener('click', () =>{
 
 //Manejo del correo 
 
-btnMail.addEventListener('click', (e) =>{
+form.addEventListener('submit', (e) =>{
     e.preventDefault();
     if(validar_correo(mail.value.toLowerCase().trim())){
-        mail.value = '';
+        // console.log(`Correo es: ${mail.value}`);
+        agregar_correo(mail.value.trim(),obtener_fecha());
         alert_correo_valido();
+        mail.value = '';
     }
     else{
         alert_correo_invalido();
         mail.focus();
+        obtener_fecha();
     }
+    
 });
 
 function validar_correo(correo){
@@ -65,6 +69,27 @@ function alert_correo_invalido(){
 	allowEnterKey: true,
 	stopKeydownPropagation: false,
     });
+}
+
+function obtener_fecha(){
+    var fecha = new Date();
+    return fecha;
+}
+
+//conexion
+firebase.initializeApp ({
+    apiKey: "AIzaSyCKzKK85FK1t2Fnvh2Xm4w2DCTaIJcHEl4",
+    authDomain: "pagsergio-8a89c.firebaseapp.com",
+    databaseURL: "https://pagsergio-8a89c.firebaseio.com",
+    projectId: "pagsergio-8a89c"
+})
+const db = firebase.firestore();
+
+function agregar_correo(mail,fecha){
+    db.collection('correos').add({
+        correo: mail,
+        fecha: fecha
+    })
 }
 
 
