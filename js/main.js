@@ -23,13 +23,12 @@ cerrar.addEventListener('click', () =>{
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     if(validar_correo(mail.value.toLowerCase().trim())){
-        // console.log(`Correo es: ${mail.value}`);
         agregar_correo(mail.value.trim(),obtener_fecha());
-        alert_correo_valido();
+        alerts('¡Gracias!','Pronto me pondré en contacto','success');
         mail.value = '';
     }
     else{
-        alert_correo_invalido();
+        alerts('¡Correo inválido!','Por favor, ingrese su correo','error');
         mail.focus();
         obtener_fecha();
     }
@@ -47,28 +46,16 @@ function validar_correo(correo){
     }
 }
 
-function alert_correo_valido(){
+function alerts(title,text,icon){
     swal.fire({
-    title: 'Gracias!',
-	text: 'Pronto me pondré en contacto',
-	icon: 'success',        
-	allowOutsideClick: true,
-	allowEscapeKey: false,
-	allowEnterKey: true,
-	stopKeydownPropagation: false,
-    });
-}
-
-function alert_correo_invalido(){
-    swal.fire({
-    title: 'Correo inválido!',
-	text: 'Por favor, ingrese su correo',
-	icon: 'error',        
-	allowOutsideClick: true,
-	allowEscapeKey: false,
-	allowEnterKey: true,
-	stopKeydownPropagation: false,
-    });
+        title: title,
+        text: text,
+        icon: icon,        
+        allowOutsideClick: true,
+        allowEscapeKey: false,
+        allowEnterKey: true,
+        stopKeydownPropagation: false,
+        });
 }
 
 function obtener_fecha(){
