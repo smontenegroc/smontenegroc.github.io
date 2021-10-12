@@ -312,3 +312,7 @@ h2{
     }
     
 }
+
+#ultimo + div{
+    visibility: hidden;
+}
