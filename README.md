@@ -1,5 +1,5 @@
 # Sergio Montenegro
 ### Desarrollador Web
 
-Mi sitio web [smontenegro.tech](smontenegro.tech)
+Mi sitio web [smontenegro.tech](http://smontenegro.tech)
 
