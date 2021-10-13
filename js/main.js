@@ -4,6 +4,13 @@ const MENUICON = document.getElementById('menu-icon');
 const MAIL = document.getElementById('txtMail');
 const FORM = document.getElementById('form-mail');
 
+window.addEventListener('load', () => {
+	let fecha = obtener_fecha()
+	let device = navigator.userAgent
+	registrar_visita(device,fecha)
+
+})
+
 //Desplegar el menú
 MENUICON.addEventListener('click', () => {
 	MENUICON.classList.toggle('change');
@@ -74,4 +81,11 @@ function agregar_correo(mail, fecha) {
 		correo: mail,
 		fecha: fecha,
 	});
+}
+
+function registrar_visita(device, fecha){
+	DB.collection('visita').add({
+		device,
+		fecha
+	})
 }
