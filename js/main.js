@@ -22,13 +22,11 @@ CERRAR.addEventListener('click', () => {
 FORM.addEventListener('submit', e => {
 	e.preventDefault();
 	if (validar_correo(MAIL.value.toLowerCase().trim())) {
-		// agregar_correo(MAIL.value.trim());
 		alerts('¡Gracias!', 'Pronto me pondré en contacto', 'success');
 		MAIL.value = '';
 	} else {
 		alerts('¡Correo inválido!', 'Por favor, ingrese un correo válido', 'error');
 		MAIL.focus();
-		obtener_fecha();
 	}
 });
 
