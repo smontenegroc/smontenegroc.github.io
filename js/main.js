@@ -4,13 +4,6 @@ const MENUICON = document.getElementById('menu-icon');
 const MAIL = document.getElementById('txtMail');
 const FORM = document.getElementById('form-mail');
 
-window.addEventListener('load', () => {
-	let fecha = obtener_fecha()
-	let device = navigator.userAgent
-	registrar_visita(device,fecha)
-
-})
-
 //Desplegar el menú
 MENUICON.addEventListener('click', () => {
 	MENUICON.classList.toggle('change');
@@ -29,11 +22,11 @@ CERRAR.addEventListener('click', () => {
 FORM.addEventListener('submit', e => {
 	e.preventDefault();
 	if (validar_correo(MAIL.value.toLowerCase().trim())) {
-		agregar_correo(MAIL.value.trim(), obtener_fecha());
+		// agregar_correo(MAIL.value.trim());
 		alerts('¡Gracias!', 'Pronto me pondré en contacto', 'success');
 		MAIL.value = '';
 	} else {
-		alerts('¡Correo inválido!', 'Por favor, ingrese su correo', 'error');
+		alerts('¡Correo inválido!', 'Por favor, ingrese un correo válido', 'error');
 		MAIL.focus();
 		obtener_fecha();
 	}
@@ -60,32 +53,4 @@ function alerts(title, text, icon) {
 		allowEnterKey: true,
 		stopKeydownPropagation: false,
 	});
-}
-
-function obtener_fecha() {
-	let fecha = new Date();
-	return fecha;
-}
-
-//conexion
-firebase.initializeApp({
-	apiKey: 'AIzaSyCKzKK85FK1t2Fnvh2Xm4w2DCTaIJcHEl4',
-	authDomain: 'pagsergio-8a89c.firebaseapp.com',
-	databaseURL: 'https://pagsergio-8a89c.firebaseio.com',
-	projectId: 'pagsergio-8a89c',
-});
-const DB = firebase.firestore();
-
-function agregar_correo(mail, fecha) {
-	DB.collection('correos').add({
-		correo: mail,
-		fecha: fecha,
-	});
-}
-
-function registrar_visita(device, fecha){
-	DB.collection('visita').add({
-		device,
-		fecha
-	})
 }
